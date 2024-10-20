@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EVC Plus Simulation</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>EVC Plus Simulation</h1>
+
+        <!-- Login Form -->
+        <div id="login-section">
+            <h2>Login</h2>
+            <label for="phone">Phone Number:</label>
+            <input type="text" id="phone" placeholder="+252612345678">
+            <label for="pin">PIN:</label>
+            <input type="password" id="pin" placeholder="****">
+            <button onclick="loginUser()">Login</button>
+        </div>
+
+        <!-- Logged-in actions (balance and transfer) -->
+        <div id="actions" style="display:none;">
+            <h3>Welcome, <span id="username"></span></h3>
+
+            <!-- Check Balance -->
+            <button onclick="checkBalance()">Check Balance</button>
+            <p id="balance"></p>
+
+            <!-- Transfer Money Form -->
+            <h2>Transfer Money</h2>
+            <label for="recipientPhone">Recipient Phone:</label>
+            <input type="text" id="recipientPhone" placeholder="+2526XXXXXXXX">
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" placeholder="Amount">
+            <button onclick="transferMoney()">Transfer</button>
+            <p id="transferMessage"></p>
+        </div>
+    </div>
+
+    <script src="evcplus.js"></script>
+</body>
+</html>
