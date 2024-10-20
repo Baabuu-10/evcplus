@@ -6,13 +6,14 @@ body {
 }
 
 .container {
-    width: 100%;
-    max-width: 400px;
+    width: 90%; /* Make it more flexible */
+    max-width: 400px; /* Keep the max-width for larger screens */
     margin: 50px auto;
     background-color: #fff;
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box; /* Ensures padding is included in the total width */
 }
 
 h1, h2, h3 {
@@ -55,4 +56,24 @@ button:hover {
     margin-top: 15px;
     color: #28a745;
     text-align: center;
+}
+
+/* Media Query for Small Devices */
+@media (max-width: 600px) {
+    .container {
+        margin-top: 150px; /* Reduce margin on smaller devices */
+        padding: 15px; /* Adjust padding */
+    }
+
+    h1 {
+        font-size: 24px; /* Adjust font size */
+    }
+
+    h2, h3 {
+        font-size: 20px; /* Adjust font size */
+    }
+
+    button {
+        font-size: 14px; /* Adjust button font size */
+    }
 }
